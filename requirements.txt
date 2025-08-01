@@ -1,8 +1,0 @@
-fastapi
-uvicorn
-requests
-pydantic
-langchain>=0.1.16
-langchain-google-genai
-pdfminer.six
-faiss-cpu
