@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+requests
+pydantic
+langchain>=0.1.16
+langchain-google-genai
+langchain_community
+python-dotenv
+pdfminer.six
+faiss-cpu
+python-multipart
