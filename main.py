@@ -83,7 +83,7 @@ async def answer_questions(req: QuestionRequest):
 
         # Load QA chain using Gemini Pro
         qa_chain = load_qa_chain(
-            llm=ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=GOOGLE_API_KEY),
+            llm=ChatGoogleGenerativeAI(model="gemini-2.5-pro", google_api_key=GOOGLE_API_KEY),
             chain_type="stuff"
         )
 
@@ -100,3 +100,4 @@ async def answer_questions(req: QuestionRequest):
     except Exception as e:
         logging.error("Error while processing request:", exc_info=e)
         raise HTTPException(status_code=500, detail=str(e))
+
