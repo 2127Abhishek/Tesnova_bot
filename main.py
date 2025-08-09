@@ -9,7 +9,7 @@ from langchain.document_loaders import PyPDFLoader
 from langchain.vectorstores import FAISS
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 # FIXED: Corrected the import for load_qa_chain
-from langchain.chains.Youtubeing import load_qa_chain
+from langchain.chains.question_answering import load_qa_chain
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from tempfile import TemporaryDirectory
@@ -124,4 +124,5 @@ async def answer_questions(req: QuestionRequest):
 
     except Exception as e:
         logging.error("Error while processing request:", exc_info=e)
+
         raise HTTPException(status_code=500, detail=str(e))
